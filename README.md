@@ -4,6 +4,6 @@
  
 Code Base: Python
 
-library used :pandas, snscrape, streamlit
+Library used :pandas, snscrape, streamlit
 
 Database: Mongodb.
