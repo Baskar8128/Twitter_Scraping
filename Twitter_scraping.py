@@ -52,7 +52,7 @@ def twitter_scraping():  # function to view the scraped dataframe
     if len(df) != 0:
         st.subheader("Scraped tweets")
         st.dataframe(df)
-    return df.head()
+    return df.head(rang)
 
 
 df = twitter_scraping()
@@ -94,7 +94,7 @@ def receiver():  # function to download the df as CSV and JSON format
             mime='text/csv'
         )
         st.download_button(
-            label="Download as CSV file",
+            label="Download as JSON file",
             data=b,
             file_name=f'{key}.csv',
             mime='text/json'
