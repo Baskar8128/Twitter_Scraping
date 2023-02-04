@@ -66,8 +66,8 @@ def database_mdb():  # function to import df to mongodb
         db = client["TwitterScraping"]
         collection = db[f"{key}"]
         data = df.to_dict(orient="records")
-        collection.insert_many(data)
         if st.button("Import to Mongodb"):
+            collection.insert_many(data)
             st.write("uploaded")
         else:
             st.write("☝ Click here to upload")
